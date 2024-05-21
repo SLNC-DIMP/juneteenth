@@ -8,7 +8,7 @@ credits: true
 # Look in _includes/feature for options to easily add features to the page
 ---
 
-{% include feature/jumbotron.html objectid="/objects/NO_4_15_1963_NegroesPicket_Fr42_001.jpg" padding="5em" %} 
+{% include feature/jumbotron.html objectid="/objects/025_1963FreedomForAll.jpg" padding="5em" %} 
 
 {% include feature/nav-menu.html sections="About the Juneteenth Collection" %}
 
