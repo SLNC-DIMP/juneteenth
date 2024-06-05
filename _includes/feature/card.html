@@ -24,8 +24,10 @@
 {%- capture alt -%}{{ item.image_alt_text | default: item.description | default: item.title }}{% endcapture %}
 {%- endif -%}
 <div class="card mb-3{% if include.float %} feature-float-{{ include.float }}{% endif %}{% if include.width %} feature-w-{{ include.width }}{% endif %}{% if include.centered %} mx-auto{% endif %}">
+    
+    {% if include.header %}<h5 style="text-align: center;" class="card-header"><b>{{ include.header }}</b></h5>{%- endif -%}
     {% if src %}<img class="card-img-top" src="{{ src }}" alt="{{ alt | escape }}">{%- endif -%}
-    {% if include.header %}<h5 class="card-header">{{ include.header }}</h5>{%- endif -%}
+    
     <div class="card-body">
         {% if include.title %}<h5 class="card-title">{{ include.title }}</h5>{%- endif -%}
         <div class="card-text">{{ include.text | markdownify }}</div>
