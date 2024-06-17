@@ -111,6 +111,7 @@ icons:
    icon-audio: soundwave
    icon-video: film
    icon-pdf: file-pdf
+   icon-book: book
    icon-record: file-text
    icon-panorama: book
    icon-compound-object: collection 
