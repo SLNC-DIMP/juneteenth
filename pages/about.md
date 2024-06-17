@@ -8,13 +8,13 @@ credits: true
 # Look in _includes/feature for options to easily add features to the page
 ---
 
-{% include feature/jumbotron.html objectid="/objects/048_freedmens_colony.jpg" padding="5em" %} 
+{% include feature/jumbotron.html objectid="/objects/048_Freedmens_colony.jpg" padding="5em" %} 
 
 {% include feature/nav-menu.html sections="About the Juneteenth Collection" %}
 
 ## About the Juneteenth Collection
 
-This collection features items from the State Library of North Carolina's [Digital Collections](https://digital.ncdcr.gov/) and online resources [NCpedia](https://ncpedia.org/) and [ANCHOR](https://ncpedia.org/anchor/anchor) that embody the spirit of the Juneteenth holiday. These items discuss the history of the the holiday, but also display the history of African Americans in North Carolina. This collection is intended to commemorate the triumph of African Americans over adversity and emphasize their achievements in education, art, and business throughout North Carolina history. 
+This collection features items from the State Library of North Carolina's [Digital Collections](https://digital.ncdcr.gov/) and online resources [NCpedia](https://ncpedia.org/) and [ANCHOR](https://ncpedia.org/anchor/anchor) that embody the spirit of the Juneteenth holiday. These items discuss the history of the the holiday with a focus on emancipation, freedom seeking, and the various ways that this took shape in our state. 
 
 {% include feature/image.html header="Juneteenth 2024 Event Calendar" objectid="juneteenth002" caption=false width="25" link="https://aahc.nc.gov/2024-juneteenth-event-calendar"%}
 ## Learn More
