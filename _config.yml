@@ -25,7 +25,7 @@ tagline: From NCpedia and NC Digital Collections
 # this description might appear in search result lists, keep around 160 characters max
 description: Resources about Juneteenth focusing on emancipation, freedom seeking, and the various ways that this took shape in our state.
 # keywords, a short list of subjects describing the collection, separated by semicolon, to appear in rich markup
-keywords: north carolina; african americans;history
+keywords: north carolina;african americans;history
 # creator of the digital collection, to appear in meta tags; we typically use our GitHub usernames but feel free to just use your name
 author: Andrea Smythe, State Library of North Carolina
 
@@ -50,7 +50,7 @@ metadata: juneteenth-metadata
 #   Enter information for your organization (replacing the CDIL links and name below) if you'd like to brand your site with a logo
 #   To remove the branding, comment out these values, or delete them. 
 #
-organization-name: State Library of North Carolina
+organization-name: "State Library of North Carolina"
 organization-link: https://statelibrary.ncdcr.gov/
 organization-logo-banner: https://static.quartexcollections.com/ncdcr/media-file/89e5af66-ebbd-428d-9dcb-dd8353724866-mastheadsingle.jpg
 organization-logo-nav: /assets/img/logo_ncdc_white.png
