@@ -48,11 +48,11 @@ $btn-active-border-tint-amount:   10% !default;
 
 // Tint a color: mix a color with white
 @function tint-color($color, $weight) {
-    @return mix(white, $color, $weight);
+    @return color.mix(white, $color, $weight);
 }
 // Shade a color: mix a color with black
 @function shade-color($color, $weight) {
-    @return mix(black, $color, $weight);
+    @return color.mix(black, $color, $weight);
 }
 // divide
 @function divide($dividend, $divisor, $precision: 10) {
@@ -127,7 +127,7 @@ $_luminance-list: .0008 .001 .0011 .0013 .0015 .0017 .002 .0022 .0025 .0027 .003
 }
 // Return opaque color
 @function opaque($background, $foreground) {
-    @return mix(rgba($foreground, 1), $background, opacity($foreground) * 100%);
+    @return color.mix(rgba($foreground, 1), $background, color.opacity($foreground) * 100%);
 }
 // Return WCAG2.0 relative luminance
 @function luminance($color) {
@@ -175,7 +175,7 @@ $_luminance-list: .0008 .001 .0011 .0013 .0015 .0017 .002 .0022 .0025 .0027 .003
         color: $hover-color;
         background-color: $hover-background;
         border-color: $hover-border;
-        box-shadow: 0 0 0 $btn-focus-width rgba(mix($color, $border, 15%), .5);
+        box-shadow: 0 0 0 $btn-focus-width rgba(color.mix($color, $border, 15%), .5);
     }
 
     .btn-check:checked + &,
@@ -187,7 +187,7 @@ $_luminance-list: .0008 .001 .0011 .0013 .0015 .0017 .002 .0022 .0025 .0027 .003
         background-color: $active-background;
         border-color: $active-border;
         &:focus {
-            box-shadow: 0 0 0 $btn-focus-width rgba(mix($color, $border, 15%), .5);
+            box-shadow: 0 0 0 $btn-focus-width rgba(color.mix($color, $border, 15%), .5);
         }
     }
 }
@@ -236,7 +236,7 @@ $_luminance-list: .0008 .001 .0011 .0013 .0015 .0017 .002 .0022 .0025 .0027 .003
     }
     a#{$parent} {
         &:hover, &:focus {
-            color: darken($color, 15%) !important;
+            color: color.scale($color, $lightness: -30%) !important;
         }
     }  
 }
@@ -263,7 +263,7 @@ $_luminance-list: .0008 .001 .0011 .0013 .0015 .0017 .002 .0022 .0025 .0027 .003
     a#{$parent},
     button#{$parent} {
         &:hover, &:focus {
-            background-color: darken($color, 10%) !important;
+            background-color: color.scale($color, $lightness: -20%) !important;
         }
     }
 }
@@ -273,7 +273,7 @@ $_luminance-list: .0008 .001 .0011 .0013 .0015 .0017 .002 .0022 .0025 .0027 .003
 */
 @each $color, $value in $theme-colors {
     /* check if value is valid color to avoid errors */
-    @if type-of($value) == color {
+    @if meta.type-of($value) == color {
         /* btn classes */
         .btn-#{$color} {
             @include theme-button($value, $value);
