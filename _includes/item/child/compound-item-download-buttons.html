@@ -12,6 +12,7 @@
     {% if page.latitude and page.longitude %}
     <a href="{{ '/map.html?location=' | append: page.latitude  | append: ',' | append: page.longitude | append: '&marker=' | append: page.objectid | relative_url }}" class="btn btn-outline-primary">View on Map</a>{% endif %}
 
+    
     <div class="btn-group" role="group">
         <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             Download
@@ -29,8 +30,9 @@
             {% endunless %}
             {% endfor %}
         </ul>
-    </div>
+    </div>    
 </div>
+
 {% if page.object_transcript %}
 <div class="collapse mt-3" id="collapseTranscript">
     <div class="card card-body text-start">
