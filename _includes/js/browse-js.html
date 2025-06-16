@@ -81,7 +81,7 @@ function makeCard(obj) {
         const btns = obj[{{ f.field | jsonify }}].split(";");
         btns.forEach(btn => {
             if(btn.trim()) {
-                card += `<a class="btn btn-sm btn-secondary m-1 text-wrap" href="{{ page.url | relative_url }}#{{ f.field }}:${encodeURIComponent(btn.trim())}">${btn.trim()}</a>`;
+                card += `<a class="btn btn-sm btn-outline-primary m-1 text-wrap" href="{{ page.url | relative_url }}#{{ f.field }}:${encodeURIComponent(btn.trim())}">${btn.trim()}</a>`;
             }
         });
         {% else %}
