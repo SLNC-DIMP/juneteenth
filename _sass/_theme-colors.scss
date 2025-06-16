@@ -15,8 +15,6 @@
 $link-color-base: "" !default;
 $theme-colors: () !default;
 
-/* variables needed from Bootstrap */ 
-
 $white:    #fff !default;
 $black:    #000 !default;
 $primary:       #0d6efd !default;
@@ -48,11 +46,11 @@ $btn-active-border-tint-amount:   10% !default;
 
 // Tint a color: mix a color with white
 @function tint-color($color, $weight) {
-    @return color.mix(white, $color, $weight);
+    @return mix(white, $color, $weight);
 }
 // Shade a color: mix a color with black
 @function shade-color($color, $weight) {
-    @return color.mix(black, $color, $weight);
+    @return mix(black, $color, $weight);
 }
 // divide
 @function divide($dividend, $divisor, $precision: 10) {
@@ -83,8 +81,8 @@ $btn-active-border-tint-amount:   10% !default;
       }
     }
     $result: $result * $factor * $sign;
-    $dividend-unit: math.unit($dividend);
-    $divisor-unit: math.unit($divisor);
+    $dividend-unit: unit($dividend);
+    $divisor-unit: unit($divisor);
     $unit-map: (
       "px": 1px,
       "rem": 1rem,
@@ -92,7 +90,7 @@ $btn-active-border-tint-amount:   10% !default;
       "%": 1%
     );
     @if ($dividend-unit != $divisor-unit and map-has-key($unit-map, $dividend-unit)) {
-      $result: $result * map.get($unit-map, $dividend-unit);
+      $result: $result * map-get($unit-map, $dividend-unit);
     }
     @return $result;
 }
@@ -175,7 +173,7 @@ $_luminance-list: .0008 .001 .0011 .0013 .0015 .0017 .002 .0022 .0025 .0027 .003
         color: $hover-color;
         background-color: $hover-background;
         border-color: $hover-border;
-        box-shadow: 0 0 0 $btn-focus-width rgba(color.mix($color, $border, 15%), .5);
+        box-shadow: 0 0 0 $btn-focus-width rgba(mix($color, $border, 15%), .5);
     }
 
     .btn-check:checked + &,
@@ -187,7 +185,7 @@ $_luminance-list: .0008 .001 .0011 .0013 .0015 .0017 .002 .0022 .0025 .0027 .003
         background-color: $active-background;
         border-color: $active-border;
         &:focus {
-            box-shadow: 0 0 0 $btn-focus-width rgba(color.mix($color, $border, 15%), .5);
+            box-shadow: 0 0 0 $btn-focus-width rgba(mix($color, $border, 15%), .5);
         }
     }
 }
@@ -236,11 +234,10 @@ $_luminance-list: .0008 .001 .0011 .0013 .0015 .0017 .002 .0022 .0025 .0027 .003
     }
     a#{$parent} {
         &:hover, &:focus {
-            color: color.scale($color, $lightness: -30%) !important;
+            color: color.adjust($color, $lightness: -15%) !important;
         }
     }  
 }
-
 /* bg-opacity classes needed to override */ 
 .bg-opacity-75 {
     --bs-bg-opacity: 0.75;
@@ -254,6 +251,7 @@ $_luminance-list: .0008 .001 .0011 .0013 .0015 .0017 .002 .0022 .0025 .0027 .003
 .bg-opacity-10 {
     --bs-bg-opacity: 0.10;
 }
+
 /* custom mixin to create background variants */ 
 @mixin theme-bg($parent, $color) {
     #{$parent} {
@@ -263,7 +261,7 @@ $_luminance-list: .0008 .001 .0011 .0013 .0015 .0017 .002 .0022 .0025 .0027 .003
     a#{$parent},
     button#{$parent} {
         &:hover, &:focus {
-            background-color: color.scale($color, $lightness: -20%) !important;
+            background-color: color.adjust($color, $lightness: -10%) !important;
         }
     }
 }
@@ -273,7 +271,7 @@ $_luminance-list: .0008 .001 .0011 .0013 .0015 .0017 .002 .0022 .0025 .0027 .003
 */
 @each $color, $value in $theme-colors {
     /* check if value is valid color to avoid errors */
-    @if meta.type-of($value) == color {
+    @if type-of($value) == color {
         /* btn classes */
         .btn-#{$color} {
             @include theme-button($value, $value);
