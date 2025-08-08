@@ -29,6 +29,7 @@ a {
     @if $link-color != "" { 
         color: $link-color; 
         &:hover {
+            text-decoration: underline;
             @if $text-color != "" { color: $text-color; }
         }
     }
