@@ -155,6 +155,9 @@ module CollectionBuilderHelperGenerator
       if !theme_icons['arrow-down']
         theme_icons['arrow-down'] = "arrow-down"
       end
+      if !theme_icons['icon-html']
+        theme_icons['icon-html'] = "window"
+      end
       # process icons
       icon_set = { }
       theme_icons.each do |i|
