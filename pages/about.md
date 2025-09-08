@@ -21,7 +21,7 @@ padding: 8em
 
 This collection features items from the State Library of North Carolina's [Digital Collections](https://digital.ncdcr.gov/) and online resources [NCpedia](https://ncpedia.org/) and [ANCHOR](https://ncpedia.org/anchor/anchor) that embody the spirit of the Juneteenth holiday. These items discuss the history of the the holiday with a focus on emancipation, freedom seeking, and the various ways that this took shape in our state. 
 
-{% include feature/card.html header="Juneteenth 2025 Event Calendar" heading-level="h4" text="Click to see the Calendar" objectid="/objects/002_juneteenth_calendar.jpg" centered="true" width="50" link="https://aahc.nc.gov/2025-juneteenth-event-calendar"%}
+{% include feature/card.html header="Juneteenth 2025 Event Calendar" heading-level="h3" text="Click to see the Calendar" objectid="/objects/002_juneteenth_calendar.jpg" centered="true" width="50" link="https://aahc.nc.gov/2025-juneteenth-event-calendar"%}
 
 ## Learn More
 
