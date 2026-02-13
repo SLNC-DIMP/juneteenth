@@ -5,18 +5,13 @@
     
 {%- endcomment -%}
 {%- assign fields = site.data.config-metadata | where_exp: 'item', 'item.display_name != nil' -%}
-{%- assign link = child.findingaid -%}
+
 <div id="item-metadata">
     <dl>
         {% for f in fields %}{% if child[f.field] %}
             {% if f.field == 'title' %}
-                {% if link %}
-                <dt class="field">{{ f.display_name }}:</dt>
-                <dd class="field_value"><a class="me-3" href="{{link}}" target="_blank" rel="noopener">{{ child.title }}</a></dd>
-                {% else %}
                 <dt class="field">{{ f.display_name }}:</dt>
                 <dd class="field_value">{{ child.title }}</dd>
-                {% endif %}
             {% else %}
             <dt class="field">{{ f.display_name }}:</dt>
             <dd class="field-value">
