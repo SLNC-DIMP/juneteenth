@@ -23,7 +23,7 @@ function getIcon(objectTemplate,objectFormat,svgType) {
         iconTitle = "book icon";
     } else if (iconTemplate.includes("html")) {
         iconId = "icon-html";
-        iconTitle = "webpage icon";
+        iconTitle = "html file icon";
     } else if (iconTemplate.includes("video")) {
         iconId = "icon-video";
         iconTitle = "video file icon";

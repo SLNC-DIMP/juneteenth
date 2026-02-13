@@ -126,4 +126,4 @@ icons:
    icon-multiple: postcard
    icon-default: file-earmark # fall back icon
    icon-back-to-top: arrow-up-square
-   icon-html: window
+   icon-html: filetype-html
