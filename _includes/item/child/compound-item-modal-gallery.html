@@ -102,13 +102,21 @@
                                                         </div>
                                                     {% elsif child.display_template == 'panorama' %}
                                                         {% include item/child/panorama.html %}
+                                                    {% elsif child.display_template == 'book' %}
+                                                        {% include item/child/book.html %}
                                                     {% else %}
                                                         {% include item/child/item-thumb.html %}
                                                     {% endif %}
                                                 </div>
+                                                {% if child.display_template != 'book'%}
                                                 <div class="my-2">
-                                                    {% include item/child/download-buttons.html %}
+                                                   {% include item/child/download-buttons.html %}
                                                 </div>
+                                                {% elsif child.display_template == 'book' and child.date%}
+                                                <div class="my-2">
+                                                   {% include item/child/download-buttons.html %}
+                                                </div>
+                                                {% endif %}
                                             </div>
                                         </div>
                                         <div class="col-md-4">
